@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Julie Gérard - Développeuse Web</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm 12mm;
+            background-color: #fafafa;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            font-size: 10pt;
+            line-height: 1.5;
+            background-color: #fafafa;
+        }
+
+        /* Layout structure using standard block/table display since flex/grid is restricted */
+        .cv-container {
+            width: 100%;
+        }
+
+        .cv-table {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .cv-row {
+            display: table-row;
+        }
+
+        .sidebar-cell {
+            display: table-cell;
+            width: 32%;
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 20px 15px;
+            vertical-align: top;
+        }
+
+        .main-cell {
+            display: table-cell;
+            width: 68%;
+            background-color: #ffffff;
+            padding: 20px 25px;
+            vertical-align: top;
+        }
+
+        /* Sidebar Elements */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Photo de profil stylisée */
+        .profile-photo-container {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3498db;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .profile-title {
+            font-size: 16pt;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .profile-subtitle {
+            font-size: 10pt;
+            color: #bdc3c7;
+            margin: 0;
+            font-style: italic;
+        }
+
+        .sidebar-section {
+            margin-bottom: 25px;
+        }
+
+        .sidebar-h2 {
+            font-size: 11pt;
+            text-transform: uppercase;
+            border-bottom: 1px solid #7f8c8d;
+            padding-bottom: 5px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: #ecf0f1;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item {
+            margin-bottom: 8px;
+            font-size: 9pt;
+            word-break: break-all;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+            margin-bottom: 1px;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 4px 8px;
+            margin: 3px 2px;
+            border-radius: 3px;
+            font-size: 8.5pt;
+        }
+
+        .lang-item {
+            margin-bottom: 5px;
+            font-size: 9pt;
+        }
+
+        /* Main Content Elements */
+        .main-header {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .main-title {
+            font-size: 20pt;
+            color: #2c3e50;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .main-subtitle {
+            font-size: 12pt;
+            color: #3498db;
+            margin: 5px 0 0 0;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .section-h2 {
+            font-size: 13pt;
+            color: #2c3e50;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            border-left: 4px solid #3498db;
+            padding-left: 8px;
+            page-break-after: avoid;
+        }
+
+        .timeline-item {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+
+        .timeline-header {
+            margin-bottom: 3px;
+        }
+
+        .timeline-date {
+            float: right;
+            font-weight: bold;
+            color: #7f8c8d;
+            font-size: 9.5pt;
+        }
+
+        .timeline-role {
+            font-weight: bold;
+            font-size: 11pt;
+            color: #2c3e50;
+        }
+
+        .timeline-company {
+            font-style: italic;
+            color: #3498db;
+            font-size: 10pt;
+        }
+
+        .timeline-desc {
+            margin: 5px 0 0 0;
+            font-size: 9.5pt;
+            color: #555555;
+            text-align: justify;
+        }
+
+        .cert-item {
+            margin-bottom: 6px;
+            font-size: 9.5pt;
+        }
+        
+        .cert-date {
+            font-weight: bold;
+            color: #7f8c8d;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-container">
+    <div class="cv-table">
+        <div class="cv-row">
+            
+            <!-- LEFT SIDEBAR -->
+            <div class="sidebar-cell">
+                <div class="profile-container">
+                    <!-- CONTENEUR PHOTO DE PROFIL -->
+                    <div class="profile-photo-container">
+                        <img class="profile-photo" src="img/photocv.jpg" alt="Julie Gérard">
+                    </div>
+                    <h1 class="profile-title">Julie Gérard</h1>
+                    <p class="profile-subtitle">Web- und Mobile-Web-Entwicklerin in Ausbildung</p>
+                </div>
+
+                <div class="sidebar-section">
+                    <h2 class="sidebar-h2">Kontakt</h2>
+                    <div class="contact-item">
+                        <span class="contact-label">Postanschrift</span>
+                        11 rue Chantrelle<br>02100 Saint-Quentin (Frankreich)
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Telefon</span>
+                        +33 (0) 7 62 96 12 00
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        julie.gerard743@sfr.fr
+                    </div>
+                    <div class="contact-item">
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/julie-gerard-417019198/" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">linkedin.com/in/julie-gerard-417019198/</a>
+                    </div>
+                    <div class="contact-item">
+                    <span class="contact-label">GitHub</span>
+                    <a href="https://github.com/Julie842" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">github.com/Julie842</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h2 class="sidebar-h2">Berufliche Fähigkeiten</h2>
+                    <div class="skill-badge">HTML5 / CSS3</div>
+                    <div class="skill-badge">JavaScript</div>
+                    <div class="skill-badge">Vernetzung (LinkedIn)</div>
+                    <div class="skill-badge">Cybersicherheit</div>
+                    <div class="skill-badge">künstliche Intelligenz</div>
+                    <div class="skill-badge">Community-Management (Facebook)</div>
+                    <div class="skill-badge">Sicherer Umgang mit gängigen MS-Office-Anwendungen</div>
+                    <div class="skill-badge">Problemlösungskompetenz</div>                       
+                </div>
+
+                <div class="sidebar-section">
+                    <h2 class="sidebar-h2">Fremdsprachen</h2>
+                    <div class="lang-item"><strong>Französisch :</strong> Muttersprache</div>
+                    <div class="lang-item"><strong>Englisch :</strong> Mittelstufe (TOEIC : 745/990)</div>
+                    <div class="lang-item"><strong>Deutsch :</strong> Anfängerniveau (wird derzeit erlernt)</div>
+                </div>
+
+                 <div class="sidebar-section">
+                    <h2 class="sidebar-h2">Vorteile</h2>
+                    <div class="lang-item">Bereitschaft zum kontinuierlichen Lernen</div>
+                    <div class="lang-item">Agiles Arbeiten und Organisation</div>
+                    <div class="lang-item">Höchste Sorgfalt und Liebe zum Detail</div>
+                    <div class="lang-item">Stressresistenz und besonnenes Handeln in Krisensituationen</div>
+                    <div class="lang-item">Pädagogische Kompetenz</div>
+                    <div class="lang-item">Interkultureller Austausch</div>   
+                </div>
+
+                <div class="sidebar-section">
+                    <h2 class="sidebar-h2">Erste Hilfe</h2>
+                    <div class="lang-item">Erste-Hilfe-Zertifikat (PSC1) erhalten (Französisches Rotes Kreuz, Oktober 2024)</div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h2 class="sidebar-h2">Interessen</h2>
+                    <div class="lang-item">Cybersicherheit</div>
+                    <div class="lang-item">künstliche Intelligenz</div>
+                    <div class="lang-item">Pix-Zertifizierung : in Vorbereitung (angestrebter score : 640, Fortgeschrittenenniveau 2)</div>
+                </div>
+                
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div class="main-cell">
+                <div class="main-header">
+                    <h2 class="main-subtitle">Suche nach einem 4-wöchigen Praktikum</h2>
+                </div>
+
+                <h2 class="section-h2">Ausbildungen</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">April 2026 - April 2028</span>
+                        <span class="timeline-role">Web- und Mobile-Web-Entwicklerin</span>
+                    </div>
+                    <div class="timeline-company">Skill & You, Montrouge (Frankreich)</div>
+                    <p class="timeline-desc">
+                        <ul>
+                            <li>Fundierte Kenntnisse in gängigen Programmiersprachen</li>
+                            <li>Fundierte Beherrschung verschiedener Entwickler-Tools</li> 
+                            <li>Kompetenzen in Webdesign sowie UX/UI-Konzeption</li>
+                            <li>Sichere Anwendung von Hosting- und Deployment-Prozessen</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">Juni - Juli 2025</span>
+                        <span class="timeline-role">DigiStart-Programm</span>
+                    </div>
+                    <div class="timeline-company">Konexio, Paris (Frankreich)</div>
+                    <p class="timeline-desc">
+                        <ul>
+                            <li>Einführung in die Grundlagen der Webentwicklung</li>
+                            <li>Praktische Anwendung des erlernten Wissens durch konkrete Projekte</li> 
+                            <li>Identifizierung der persönlichen Leidenschaft und Eignung für die Softwareentwicklung</li>
+                        </ul>    
+                    </p>
+                </div>
+
+                <h2 class="section-h2">Berufserfahrungen</h2>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">Juli 2018 - Juni 2025</span>
+                        <span class="timeline-role">Empfangsmitarbeiterin bei einem lokalen Radiosender</span>
+                    </div>
+                    <div class="timeline-company">Radio France, Paris (Frankreich)</div>
+                    <p class="timeline-desc">
+                        <ul>
+                            <li>Empfang von Gästen und Zuhörern (persönlich und telefonisch)</li> 
+                            <li>Betreuung einer Facebook-Community mit über 100 aktiven Nutzern pro Tag</li> 
+                        </ul>    
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-date">Juli 2010 - November 2017</span>
+                        <span class="timeline-role">Verwaltungsangestellte</span>
+                    </div>
+                    <div class="timeline-company">SCP DENS-VIEL (Anwaltskanzlei), Saint-Quentin (Frankreich)</div>
+                    <p class="timeline-desc">
+                        <ul>  
+                            <li>Persönlicher und telefonischer Kundenempfang; Sorgfältige administrative</li>
+                            <li>Betreuung von jährlich über 100 komplexen Rechtsfällen</li>
+                        </ul>    
+                    </p>
+
+                </div>
+
+                <h2 class="section-h2">Zertifizierungen</h2>
+                <div class="cert-item"><span class="cert-date"> Juni 2026 :</span> Data Fundamentals (IBM SkillsBuild)</div>
+                <div class="cert-item"><span class="cert-date"> Mai 2026 :</span> AI Literacy (IBM SkillsBuild)</div>
+                <div class="cert-item"><span class="cert-date"> April 2026 :</span> Foundations of Project Management (Google / Coursera)</div>
+                <div class="cert-item"><span class="cert-date"> Februar 2026 :</span> Cybersecurity Fundamentals (IBM SkillsBuild)</div>
+                <div class="cert-item"><span class="cert-date"> Oktober 2025 :</span> Web Development Fundamentals (IBM SkillsBuild)</div>
+
+                </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
